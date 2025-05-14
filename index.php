@@ -1,11 +1,10 @@
 <?php
 require_once 'menu.php';
 
-// Set content type for all responses
+// Set content type for all response
 if (!headers_sent()) {
     header('Content-type: text/plain');
 }
-
 // Robust error handling for USSD responses
 set_exception_handler(function($e) {
     error_log("Fatal error: " . $e->getMessage());
