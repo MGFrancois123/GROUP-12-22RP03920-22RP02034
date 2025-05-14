@@ -12,7 +12,7 @@ class SMS {
                 throw new Exception("Phone number and message are required");
             }
 
-            // Format phone number to +2547XXXXXXXX for Kenya (sandbox only)
+            // Format phone number to +250XXXXXXXX for Kenya (sandbox only)
             $phoneNumber = preg_replace('/\D/', '', $phoneNumber);
             if (strpos($phoneNumber, '0') === 0) {
                 $phoneNumber = '250' . substr($phoneNumber, 1);
